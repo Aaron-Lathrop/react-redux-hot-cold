@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './feedback.css';
-import { connect } from 'net';
+import { connect } from 'react-redux';
 
 export function Feedback(props) {
   /** 

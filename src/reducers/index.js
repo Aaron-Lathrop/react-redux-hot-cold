@@ -21,7 +21,6 @@ export const gameReducer = (state=initialState, action) => {
 
         const difference = Math.abs(guess - state.correctAnswer);
 
-        let feedback;
         if (difference >= 50) {
             feedback = 'You\'re Ice Cold...';
             } else if (difference >= 30) {
