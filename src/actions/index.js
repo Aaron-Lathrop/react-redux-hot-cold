@@ -10,3 +10,8 @@ export const generateAurualUpdate = auralStatus => ({
     type: GENERATE_AURAL_UPDATE,
     auralStatus
 });
+
+export const RESTART_GAME = 'RESTART_GAME';
+export const restartGame = () => ({
+    type: RESTART_GAME,
+});
