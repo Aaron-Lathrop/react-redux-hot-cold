@@ -5,10 +5,23 @@ import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
+
+
 export default class Game extends React.Component {
-  
+  makeGuess(guess, guesses, feedback) {
+    this.props.dispatch(makeGuess(guess, guesses, feedback));
+  }
+
+  generateAuralUpdate(auralStatus) {
+    this.props.dispatch(generateAurualUpdate(auralStatus));
+  }
+
+  restartGame() {
+    this.props.dispatch(restartGame());
+  }
+
   render() {
-    const { feedback, guesses, auralStatus } = this.state;
+    const { feedback, guesses, auralStatus } = this.props;
     const guessCount = guesses.length;
 
     return (
