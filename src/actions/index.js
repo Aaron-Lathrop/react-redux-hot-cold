@@ -1,8 +1,9 @@
 export const MAKE_GUESS = 'MAKE_GUESS';
-export const makeGuess = (guesses, feedback) => ({
+export const makeGuess = (guess, guesses, feedback) => ({
     type: MAKE_GUESS,
     guesses,
-    feedback
+    feedback,
+    correctAnswer
 });
 
 export const GENERATE_AURAL_UPDATE = 'GENERATE_AURAL_UPDATE';
