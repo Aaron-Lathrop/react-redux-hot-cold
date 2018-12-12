@@ -8,8 +8,8 @@ import InfoSection from './info-section';
 
 
 export default class Game extends React.Component {
-  makeGuess(guess, guesses, feedback) {
-    this.props.dispatch(makeGuess(guess, guesses, feedback));
+  makeGuess(guess) {
+    this.props.dispatch(makeGuess(guess));
   }
 
   generateAuralUpdate(auralStatus) {
@@ -45,3 +45,12 @@ export default class Game extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  guesses: state.guesses,
+  feedback: state.feedback,
+  auralStatus: state.auralStatus,
+  correctAnswer: state.correctAnswer
+});
+
+export default connect(mapStateToProps)(Game);
