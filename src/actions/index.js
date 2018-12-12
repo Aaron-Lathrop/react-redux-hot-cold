@@ -1,6 +1,12 @@
-export const ADD_GUESS = 'ADD_GUESS';
-export const addGuess = guess => ({
-    type: ADD_GUESS,
-    guess
+export const MAKE_GUESS = 'MAKE_GUESS';
+export const makeGuess = (guesses, feedback) => ({
+    type: MAKE_GUESS,
+    guesses,
+    feedback
 });
 
+export const GENERATE_AURAL_UPDATE = 'GENERATE_AURAL_UPDATE';
+export const generateAurualUpdate = auralStatus => ({
+    type: GENERATE_AURAL_UPDATE,
+    auralStatus
+});
